@@ -76,7 +76,7 @@ This project has following deliverables
 
 ## Refernces
 
-* [1]: https://stanfordmlgroup.github.io/competitions/chexpert/
-* [2]: https://pytorch.org/deep-learning-with-pytorch
-* [3]: https://arxiv.org/pdf/1901.07031.pdf
-* [4]: https://en.wikipedia.org/wiki/PyTorch
+* [1] https://stanfordmlgroup.github.io/competitions/chexpert/
+* [2] https://pytorch.org/deep-learning-with-pytorch
+* [3] https://arxiv.org/pdf/1901.07031.pdf
+* [4] https://en.wikipedia.org/wiki/PyTorch
