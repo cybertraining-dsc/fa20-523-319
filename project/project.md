@@ -1,16 +1,15 @@
 # Detect and classify pathologies in chest X-rays using PyTorch library
 
+- [ ] please use oure template as posted in piazza
+- [ ] please use propper footnotes for refernces
+
 | Rama Asuri
 | asurirk@gmail.com, rasuri@indiana.edu
 | Indiana University
 | hid: fa20-523-319
 
 
----
-
 Keywords: PyTorch, CheXpert
-
----
 
 ## Abstract
 
@@ -50,7 +49,9 @@ we develop the Deep Learning Software using PyTorch library to perform the follo
 5. Diagnose the patient 
 
 ## Design
+
 > Missing design
+
 ## Architecture
 
 ## Dataset
@@ -64,7 +65,9 @@ we develop the Deep Learning Software using PyTorch library to perform the follo
 ## Conclusion
 
 ## Acknowledgement
+
 ## Project plan
+
 > Missing - Adding detailed project plan
 
 This project has following deliverables
@@ -73,6 +76,7 @@ This project has following deliverables
 3. Working Software demo
 
 ## Footnotes
+
 [1]: https://stanfordmlgroup.github.io/competitions/chexpert/
 [2]: https://pytorch.org/deep-learning-with-pytorch
 [3]: https://arxiv.org/pdf/1901.07031.pdf
