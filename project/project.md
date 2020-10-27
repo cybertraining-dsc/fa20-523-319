@@ -119,8 +119,25 @@ This section will be addressed upon project completion.
 
 ## 8. Project plan
 
+## October 26, 2020
+* Test train and validate functionality on PyTorch Dataset
+* Update Project.md with project plan
+
+## November 02, 2020
+* Test train and validate functionality on manual uploaded CheXpert Dataset 
+* Update project.md with specific details about Deep learning models
+
+## November 09, 2020
+* Test train and validate functionality on downloaded CheXpert Dataset using "wget" 
+* Update project.md with details about train and validation data set
+* Capture improvements to loss function
+
+## November 16, 2020
+* Final review of code and project.md
+
 ## 9. References
-[^1]: https://stanfordmlgroup.github.io/competitions/chexpert/
+
+[^1]: Dataset <https://stanfordmlgroup.github.io/competitions/chexpert/>
 [^2]: https://pytorch.org/deep-learning-with-pytorch
 [^3]: https://arxiv.org/pdf/1901.07031.pdf
 [^4]: https://en.wikipedia.org/wiki/PyTorch
