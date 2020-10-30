@@ -52,10 +52,11 @@ architectures and train them on individual machines or parallel computing resour
 CheXpert is a large public dataset for chest radiograph interpretation, consisting of 224,316 chest radiographs
 of 65,240 patients labeled for the presence of 14 observations as positive, negative, or uncertain [^3].
 
-![Probability of different observations](images/chest_disease.png)
-<p>    
-    <em>Figure 1: Probability of different observations</em>
-</p>
+
+![Probability of different observations](https://github.com/cybertraining-dsc/fa20-523-319/raw/master/project/images/chest_disease.png)
+
+**Figure 1:** Probability of different observations
+
 
 
 ### 3.1 Data Collection
