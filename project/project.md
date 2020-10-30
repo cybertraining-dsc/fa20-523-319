@@ -1,5 +1,7 @@
 # Detect and classify pathologies in chest X-rays using PyTorch library
 
+-[ ] please fix refernces
+
 Rama Asuri, [fa20-523-319](https://github.com/cybertraining-dsc/fa20-523-319/), [Edit](https://github.com/cybertraining-dsc/fa20-523-319/blob/master/project/project.md)
 
 {{% pageinfo %}}
@@ -137,8 +139,8 @@ This section will be addressed upon project completion.
 
 [^1]: Dataset <https://stanfordmlgroup.github.io/competitions/chexpert/>
 
-[^2]: <https://pytorch.org/deep-learning-with-pytorch>
+[^2]: DETAILS MISSING  <https://pytorch.org/deep-learning-with-pytorch>
 
-[^3]: <https://arxiv.org/pdf/1901.07031.pdf>
+[^3]: details missing <https://arxiv.org/pdf/1901.07031.pdf>
 
-[^4]: <https://en.wikipedia.org/wiki/PyTorch>
+[^4]: details missing <https://en.wikipedia.org/wiki/PyTorch>
