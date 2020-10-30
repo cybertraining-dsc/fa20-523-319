@@ -138,6 +138,9 @@ This section will be addressed upon project completion.
 ## 9. References
 
 [^1]: Dataset <https://stanfordmlgroup.github.io/competitions/chexpert/>
-[^2]: https://pytorch.org/deep-learning-with-pytorch
-[^3]: https://arxiv.org/pdf/1901.07031.pdf
-[^4]: https://en.wikipedia.org/wiki/PyTorch
+
+[^2]: <https://pytorch.org/deep-learning-with-pytorch>
+
+[^3]: <https://arxiv.org/pdf/1901.07031.pdf>
+
+[^4]: <https://en.wikipedia.org/wiki/PyTorch>
