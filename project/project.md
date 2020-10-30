@@ -1,6 +1,6 @@
 # Detect and classify pathologies in chest X-rays using PyTorch library
 
--[ ] please fix refernces
+- [ ] please fix refernces
 
 Rama Asuri, [fa20-523-319](https://github.com/cybertraining-dsc/fa20-523-319/), [Edit](https://github.com/cybertraining-dsc/fa20-523-319/blob/master/project/project.md)
 
