@@ -126,8 +126,8 @@ This section will be addressed upon project completion.
   * Test train and validate functionality on PyTorch Dataset
   * Update Project.md with project plan
 *  November 02, 2020
-  * Test train and validate functionality on manual uploaded CheXpert Dataset 
-  * Update project.md with specific details about Deep learning models
+   * Test train and validate functionality on manual uploaded CheXpert Dataset
+   * Update project.md with specific details about Deep learning models
 * November 09, 2020
   * Test train and validate functionality on downloaded CheXpert Dataset using "wget" 
   * Update project.md with details about train and validation data set
@@ -137,10 +137,10 @@ This section will be addressed upon project completion.
 
 ## 9. References
 
-[^1]: Dataset <https://stanfordmlgroup.github.io/competitions/chexpert/>
+[^1]: Chest X-ray Dataset <https://stanfordmlgroup.github.io/competitions/chexpert/>
 
-[^2]: DETAILS MISSING  <https://pytorch.org/deep-learning-with-pytorch>
+[^2]: Introduction to PyTorch and documentation  <https://pytorch.org/deep-learning-with-pytorch>
 
-[^3]: details missing <https://arxiv.org/pdf/1901.07031.pdf>
+[^3]: Whitepaper - CheXpert Dataset and Labelling  <https://arxiv.org/pdf/1901.07031.pdf>
 
-[^4]: details missing <https://en.wikipedia.org/wiki/PyTorch>
+[^4]: Overview of PyTorch Library <https://en.wikipedia.org/wiki/PyTorch>
