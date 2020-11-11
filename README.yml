@@ -6,7 +6,9 @@ owner:
   community: "534"
   semester: "fa20"
 project:
-  title: TBD
-  url: TBD
+  title: Detect and classify pathologies in chest X-rays using PyTorch library
+  url: https://github.com/cybertraining-dsc/fa20-523-312/blob/master/project/project.md
   author:
-    - fa20-523-319
+    - Rama Asuri, fa20-523-319
+
+
