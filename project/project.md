@@ -100,7 +100,7 @@ consist of 12 pathologies as well as the *Support Devices* and *No Finding* obse
 one mention that is positively classified in the report is assigned a positive (1) label. An observation is assigned 
 an uncertain (u) label if it has no positively classified mentions and at least one uncertain mention, and a negative
 label if there is at least one negatively classified mention. Assign (blank) if there is no mention of an observation.
-The “No Finding” observation is assigned a positive label (1) if there is no pathology classified as positive 
+The *No Finding* observation is assigned a positive label (1) if there is no pathology classified as positive 
 or uncertain [^3].
 
 ## 4. Use case and deep learning model
