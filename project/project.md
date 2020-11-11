@@ -2,8 +2,6 @@
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-319/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-319/actions)
 
-- [ ] please fix refernces
-
 Rama Asuri, [fa20-523-319](https://github.com/cybertraining-dsc/fa20-523-319/), [Edit](https://github.com/cybertraining-dsc/fa20-523-319/blob/master/project/project.md)
 
 {{% pageinfo %}}
@@ -44,6 +42,7 @@ There are number of Deep Learning applications that are built on top of PyTorch,
 Pyro etc [^4].
 
 ## 2. PyTorch Library
+
 PyTorch library is based on Python and used for developing Python deep learning models. Many of the early adopters 
 of the PyTorch are from research community. It grew into one of the most popular library for deep learning projects. 
 PyTorch provides great insight into Deep Learning. PyTorch is widely used in real-world applications. PyTorch makes an
@@ -53,6 +52,7 @@ accelerated mathematical operations on dedicated hardware, which makes it conven
 architectures and train them on individual machines or parallel computing resources [^2].
 
 ## 3. Dataset
+
 CheXpert is a large public dataset for chest radiograph interpretation, consisting of 224,316 chest radiographs
 of 65,240 patients labeled for the presence of 14 observations as positive, negative, or uncertain [^3].
 
@@ -64,24 +64,28 @@ of 65,240 patients labeled for the presence of 14 observations as positive, nega
 
 
 ### 3.1 Data Collection
+
 CheXpert's dataset is a collection of chest radiographic studies from Stanford Hospital, performed between October 
 2002 and July 2017 in both inpatient and outpatient centers, along with their associated radiology reports. 
 From these, created a sampled set of 1000 reports for manual review by a boardcertified radiologist to determine
 feasibility for extraction of observations. The final set consist of 14 observations based on the prevalence in the 
-reports and clinical relevance, conforming to the Fleischner Society’s recommended glossary. “Pneumonia”, despite 
+reports and clinical relevance, conforming to the Fleischner Society’s recommended glossary. *Pneumonia*, despite 
 being a clinical diagnosis, was included as a label in order to represent the images that suggested primary 
-infection as the diagnosis. The “No Finding” observation was intended to capture the absence of all pathologies [^3].
+infection as the diagnosis. The *No Finding* observation was intended to capture the absence of all pathologies [^3].
 
 ### 3.2 Data Labelling
+
 Labels were developed using an automated rule-based labeler to extract observations from the free text radiology 
 reports to be used as structured labels for the images [^3]. 
 
 ### 3.3 Label Extraction
+
 The labeler extracts mentions from a list of observations from the Impression section of radiology reports, which 
 summarizes the key findings in the radiographic study. A large list of phrases was manually curated by multiple 
 board-certified radiologists to match various ways observations are mentioned in the reports [^3].
 
 ### 3.4 Label Classification
+
 After extracting mentions of observations, CheXpert Labler classify them as negative , uncertain or positive. 
 The ‘uncertain’ label can capture both the uncertainty of a radiologist in the diagnosis as well as ambiguity 
 inherent in the report. The mention classification stage is a 3-phase pipeline consisting of pre-negation uncertainty, 
@@ -92,7 +96,7 @@ classified as positive [^3].
 ### 3.5 Label Aggregation
 
 CheXpert use the classification for each mention of observations to arrive at a final label for 14 observations that 
-consist of 12 pathologies as well as the “Support Devices” and “No Finding” observations. Observations with at least 
+consist of 12 pathologies as well as the *Support Devices* and *No Finding* observations. Observations with at least 
 one mention that is positively classified in the report is assigned a positive (1) label. An observation is assigned 
 an uncertain (u) label if it has no positively classified mentions and at least one uncertain mention, and a negative
 label if there is at least one negatively classified mention. Assign (blank) if there is no mention of an observation.
