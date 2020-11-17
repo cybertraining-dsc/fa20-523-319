@@ -122,17 +122,18 @@ AUC - ROC curve is a performance measurement for classification problem at vario
 
 AUCROC's Sensitivity and Specificity are inversely proportional to each other. So when we increase Sensitivity, Specificity decreases and vice versa.
 When we decrease the threshold, we get more positive values thus it increases the sensitivity and decreasing the specificity.
-Similarly, when we increase the threshold, we get more negative values thus we get higher specificity and lower sensitivity [^5]. 
+Similarly, when we increase the threshold, we get more negative values thus we get higher specificity and lower sensitivity [^5].
 
 ## 6. Conclusion
 
 
 Model was able to predict False Positives. Below is AUCROC table.
-![Figure 2](https://github.com/cybertraining-dsc/fa20-523-319/raw/master/project/images/roc.PNG)
+![Figure 2](https://github.com/cybertraining-dsc/fa20-523-319/raw/master/project/images/roc.png)
 
 **Figure 2:** AUC - ROC Curve
 
 ## 7. Acknowledgements
+
 The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors for providing continuous guidance and feedback for this final project.
 ## 8. Project plan
 
