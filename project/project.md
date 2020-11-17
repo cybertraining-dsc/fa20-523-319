@@ -57,7 +57,7 @@ CheXpert is a large public dataset for chest radiograph interpretation, consisti
 of 65,240 patients labeled for the presence of 14 observations as positive, negative, or uncertain [^3].
 
 
-![Probability of different observations](https://github.com/cybertraining-dsc/fa20-523-319/raw/master/project/images/chest_disease.png)
+![Figure 1](https://github.com/cybertraining-dsc/fa20-523-319/raw/master/project/images/chest_disease.png)
 
 **Figure 1:** Probability of different observations
 
@@ -124,7 +124,7 @@ This section will be addressed upon project completion.
 
 This section will be addressed upon project completion.
 
-![AUC - ROC Curve](https://github.com/cybertraining-dsc/fa20-523-319/blob/master/project/images/roc.PNG)
+![Figure 2](https://github.com/cybertraining-dsc/fa20-523-319/blob/master/project/images/roc.PNG)
 
 **Figure 2:** AUC - ROC Curve
 
