@@ -2,7 +2,7 @@
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-319/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-319/actions)
 
-Rama Asuri, [fa20-523-319](https://github.com/cybertraining-dsc/fa20-523-319/), [Edit](https://github.com/cybertraining-dsc/fa20-523-319/blob/master/project/project.md)
+Rama Asuri, [fa20-523-319](https://github.com/cybertraining-dsc/fa20-523-319/), [Edit](https://github.com/cybertraining-dsc/fa20-523-319/blob/main/project/project.md)
 
 {{% pageinfo %}}
 
@@ -57,7 +57,7 @@ CheXpert is a large public dataset for chest radiograph interpretation, consisti
 of 65,240 patients labeled for the presence of 14 observations as positive, negative, or uncertain [^3].
 
 
-![Figure 1](https://github.com/cybertraining-dsc/fa20-523-319/raw/master/project/images/chest_disease.png)
+![Figure 1](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/chest_disease.png)
 
 **Figure 1:** Probability of different observations
 
@@ -128,7 +128,7 @@ Similarly, when we increase the threshold, we get more negative values thus we g
 
 
 Model was able to predict False Positives. Below is AUCROC table.
-![Figure 2](https://github.com/cybertraining-dsc/fa20-523-319/raw/master/project/images/roc.png)
+![Figure 2](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/roc.png)
 
 **Figure 2:** AUC - ROC Curve
 
