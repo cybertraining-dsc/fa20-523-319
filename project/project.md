@@ -116,15 +116,19 @@ Our approach to detecting pathologies will have 5 steps.
 * Classify the pathology
 * Diagnose the patient
 
+AUC - ROC curve is a performance measurement for classification problem at various thresholds settings. ROC is a probability curve and AUC represents degree or measure of separability. Higher the AUC, better the model is at predicting 0s as 0s and 1s as 1s. By analogy, Higher the AUC, better the model is at distinguishing between patients with disease and no disease.
+
 ## 5. Inference
 
-This section will be addressed upon project completion.
+AUCROC's Sensitivity and Specificity are inversely proportional to each other. So when we increase Sensitivity, Specificity decreases and vice versa.
+When we decrease the threshold, we get more positive values thus it increases the sensitivity and decreasing the specificity.
+Similarly, when we increase the threshold, we get more negative values thus we get higher specificity and lower sensitivity [^5]. 
 
 ## 6. Conclusion
 
-This section will be addressed upon project completion.
 
-![Figure 2](https://github.com/cybertraining-dsc/fa20-523-319/blob/master/project/images/roc.PNG)
+Model was able to predict False Positives. Below is AUCROC table.
+![Figure 2](https://github.com/cybertraining-dsc/fa20-523-319/raw/master/project/images/roc.PNG)
 
 **Figure 2:** AUC - ROC Curve
 
