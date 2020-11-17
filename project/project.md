@@ -124,7 +124,7 @@ This section will be addressed upon project completion.
 
 This section will be addressed upon project completion.
 
-![AUC - ROC Curve](https://github.com/cybertraining-dsc/fa20-523-319/raw/master/project/images/chest_disease.png)
+![AUC - ROC Curve](https://github.com/cybertraining-dsc/fa20-523-319/blob/master/project/images/roc.PNG)
 
 **Figure 2:** AUC - ROC Curve
 
