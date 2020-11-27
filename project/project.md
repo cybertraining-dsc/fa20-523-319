@@ -89,7 +89,13 @@ label if there is at least one negatively classified mention. Assign (blank) if 
 The *No Finding* observation is assigned a positive label (1) if there is no pathology classified as positive
 or uncertain [^3].
 
-## 4. Use case and deep learning model
+## 4. Overview Of AUC-ROC Curve
+
+![Figure 2](https://github.com/cybertraining-dsc/fa20-523-319/blob/main/project/images/Confusion%20Matrix.png.png)
+
+**Figure 2:** Confusion Matrix
+
+## 5. Chest X-Rays - Multi Image Classification Using Deep Learning Model
 
 Our Deep Learning model loads and process the raw data files and implement a Python class to represent data by
 converting it into a format usable by PyTorch. We then, visualize the training and validation data.
@@ -104,7 +110,6 @@ Our approach to detecting pathologies will have 5 steps.
 
 AUC - ROC curve is a performance measurement for classification problem at various thresholds settings. ROC is a probability curve and AUC represents degree or measure of separability. Higher the AUC, better the model is at predicting 0s as 0s and 1s as 1s. By analogy, Higher the AUC, better the model is at distinguishing between patients with disease and no disease.
 
-## 5. Inference
 
 AUCROC's Sensitivity and Specificity are inversely proportional to each other. So when we increase Sensitivity, Specificity decreases and vice versa.
 When we decrease the threshold, we get more positive values thus it increases the sensitivity and decreasing the specificity.
@@ -114,9 +119,9 @@ Similarly, when we increase the threshold, we get more negative values thus we g
 
 
 Model was able to predict False Positives. Below is AUCROC table.
-![Figure 2](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/roc.png)
+![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/roc.png)
 
-**Figure 2:** AUC - ROC Curve
+**Figure 3:** AUC - ROC Curve
 
 ## 7. Acknowledgements
 
