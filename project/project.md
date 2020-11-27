@@ -10,7 +10,7 @@ Rama Asuri, [fa20-523-319](https://github.com/cybertraining-dsc/fa20-523-319/), 
 {{% pageinfo %}}
 
 ## Abstract
-Chest X-rays reveal many diseases. Early detection of a disease often improves the survival chance for Patients. Chest X-rays are one of the important tools for Radiologists to detect and identify underlying health conditions. But it is a time consuming process and rushing to complete will only result in mistakes by Radiologists. With technological advances in AI, Deep Learning models can analyze the X-rays like a Radiologists and accurately predict much better than the Radiologists. It has also proven to have  performance significantly better than Radiologists which means it can analze lot faster than a Radiologist. Deep learning is a technique to extract and transform data using multiple layers of neural networks. Each layer takes inputs from previous layers and incrementally refines it. An algorithm is used to train these layers to minimize errors and improve overall accuracy of these layers[^10]. This allow the network to learn to perform a specified task and gains an expert level performance by training on large datasets. Our project uses Deep learning models to detect and diagnose multiple conditions based on image classification of the Chest X-ray dataset called CheXpert. CheXpert dataset contain 224,316 chest radiographs of 65,240 patients. There are 14 observations in a radiology report and labels are mapped to these 14 observations. We train our models to use the labels for Atelectasis, Cardiomegaly, Consolidation, Edema, and Pleural Effusion that corresponds to 5 different diseases respectively. We also test how well our model predicts the diseases and capture results in AUC-ROC curve. We use PyTorch library to build our Deep Learning model which enables fast, flexible experimentation and efficient production through a user-friendly front-end, distributed training, and ecosystem of tools and libraries[^7].
+Chest X-rays reveal many diseases. Early detection of a disease often improves the survival chance for Patients. It is one of the important tool for Radiologists to detect and identify underlying health conditions. But it is also a time consuming process and rushing to complete will only result in mistakes by Radiologists. With technological advances in AI, Deep Learning models can analyze the X-rays like a Radiologist and accurately predict much better than the Radiologists. It's performance is significantly better than Radiologists which means it can analyze and predict lot faster than a Radiologist. Deep learning is a technique to extract and transform data using multiple layers of neural networks. Each layer takes inputs from previous layers and incrementally refines it. An algorithm is used to train these layers to minimize errors and improve overall accuracy of these layers[^10]. It enables the network to learn to perform a specified task and gain an expert level performance by training on large datasets. Our project implements Deep learning models to detect and diagnose multiple conditions using image classification algorithm. Our dataset is called CheXpert which consists of Chest X-rays. CheXpert dataset contain 224,316 chest Radiographs of 65,240 patients. There are 14 observations in a radiology report and labels are mapped to these 14 observations. We train our models to use the labels for Atelectasis, Cardiomegaly, Consolidation, Edema, and Pleural Effusion that corresponds to 5 different diseases respectively. We test our model performance, which is, how well our model predicts the diseases. We plot the model performance using AUC-ROC curve. Our Deep Learning models use PyTorch library which enables fast, flexible experimentation and efficient production through a user-friendly front-end, distributed training, and ecosystem of tools and libraries[^7].
 
 
 Contents
@@ -24,13 +24,7 @@ Contents
 
 ## 1. Introduction
 
-Deep learning methods are becoming very reliable at achieving expert level performance using large labeled datasets.
-CheXpert is a large dataset that contains 224,316 chest radiographs of 65,240 patients. This dataset contains
-14 observations in radiology reports and also capturing uncertainties inherent in radiograph interpretation using
-uncertainty labels. There is also a validation set of 200 chest radiographic studies which were manually annotated
-by 3 board-certified radiologists. Deep learning model should detect different pathologies. CheXpert is a public
-dataset [^3] and has a strong radiologist-annotated ground truth and expert scores against which we can compare
-the model [^1].
+Deep Learning methods are becoming very reliable at achieving expert level performance using large labeled datasets. In our project, we develop a Deep Learning model to use CheXpert dataset, which is a large dataset that contains 224,316 chest radiographs of 65,240 patients, to detect and classify the following 5 pathologies: Atelectasis, Cardiomegaly, Consolidation, Edema, and Pleural Effusion. The dataset has 14 observations in radiology reports and captures uncertainties inherent in radiograph interpretation using uncertainty labels. We impute uncertainty labels with randomly selected Boolean values.
 
 We will use PyTorch library which is an open source machine learning library based on the Torch library [^2]. It is
 used for applications such as computer vision and natural language processing which is primarily developed by
@@ -146,7 +140,11 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
   * Update project.md with details about train and validation data set
   * Capture improvements to loss function
 * November 16, 2020
-  * Final review of code and project.md
+  * Self review - code and project.md
+* December 02, 2020
+  * Review with TA/Professor - code and project.md
+* December 07, 2020
+  * Final submission - code and project.md
 
 ## 9. References
 
