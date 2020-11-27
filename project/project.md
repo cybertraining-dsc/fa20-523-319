@@ -10,12 +10,7 @@ Rama Asuri, [fa20-523-319](https://github.com/cybertraining-dsc/fa20-523-319/), 
 {{% pageinfo %}}
 
 ## Abstract
-
-Deep learning gains expert level performance by training on large datasets. Our project uses chest x-rays dataset
-called CheXpert and apply deep learning to detect and diagnose a condition based on image data. CheXpert dataset
-contain 224,316 chest radiographs of 65,240 patients. There are 14 observations in a radiology report and labels are
-mapped to these 14 observations. We train our models to use the labels that corresponds to different diseases. Our
-deep learning models are based on PyTorch library.
+Chest X-rays reveal many diseases. Early detection of a disease often improves the survival chance for Patients. Chest X-rays are one of the important tools for Radiologists to detect and identify underlying health conditions. But it is a time consuming process and rushing to complete will only result in mistakes by Radiologists. With technological advances in AI, Deep Learning models can analyze the X-rays like a Radiologists and accurately predict much better than the Radiologists. It has also proven to have  performance significantly better than Radiologists which means it can analze lot faster than a Radiologist. Deep learning is a technique to extract and transform data using multiple layers of neural networks. Each layer takes inputs from previous layers and incrementally refines it. An algorithm is used to train these layers to minimize errors and improve overall accuracy of these layers[^10]. This allow the network to learn to perform a specified task and gains an expert level performance by training on large datasets. Our project uses Deep learning models to detect and diagnose multiple conditions based on image classification of the Chest X-ray dataset called CheXpert. CheXpert dataset contain 224,316 chest radiographs of 65,240 patients. There are 14 observations in a radiology report and labels are mapped to these 14 observations. We train our models to use the labels for Atelectasis, Cardiomegaly, Consolidation, Edema, and Pleural Effusion that corresponds to 5 different diseases respectively. We also test how well our model predicts the diseases and capture results in AUC-ROC curve. We use PyTorch library to build our Deep Learning model which enables fast, flexible experimentation and efficient production through a user-friendly front-end, distributed training, and ecosystem of tools and libraries[^7].
 
 
 Contents
@@ -70,7 +65,7 @@ of 65,240 patients labeled for the presence of 14 observations as positive, nega
 
 CheXpert's dataset is a collection of chest radiographic studies from Stanford Hospital, performed between October
 2002 and July 2017 in both inpatient and outpatient centers, along with their associated radiology reports.
-From these, created a sampled set of 1000 reports for manual review by a boardcertified radiologist to determine
+From these, created a sampled set of 1000 reports for manual review by a board certified radiologist to determine
 feasibility for extraction of observations. The final set consist of 14 observations based on the prevalence in the
 reports and clinical relevance, conforming to the Fleischner Society’s recommended glossary. *Pneumonia*, despite
 being a clinical diagnosis, was included as a label in order to represent the images that suggested primary
@@ -162,4 +157,15 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 [^3]: Whitepaper - CheXpert Dataset and Labelling  <https://arxiv.org/pdf/1901.07031.pdf>
 
 [^4]: Overview of PyTorch Library <https://en.wikipedia.org/wiki/PyTorch>
+
 [^5]: PyTorch Deep Learning Model for CheXpert Dataset <https://www.kaggle.com/hmchuong/chexpert-pytorch-densenet121>
+
+[^6]: Overview of AUC-ROC Curve in Machine Learning <https://www.analyticsvidhya.com/blog/2020/06/auc-roc-curve-machine-learning/>
+
+[^7]: An open source machine learning framework that accelerates the path from research prototyping to production deployment <https://pytorch.org/>
+
+[^8]: PyTorch Computer Vision Cookbook <https://www.packtpub.com/product/pytorch-computer-vision-cookbook/9781838644833>
+
+[^9]: PyTorch 1.x Reinforcement Learning Cookbook <https://www.packtpub.com/product/pytorch-1-x-reinforcement-learning-cookbook/9781838551964>
+
+[^10]: Howard, Jeremy; Gugger, Sylvain. Deep Learning for Coders with fastai and PyTorch . O'Reilly Media. Kindle Edition <https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527/ref=sr_1_5?dchild=1&keywords=pytorch&qid=1606487426&sr=8-5>
