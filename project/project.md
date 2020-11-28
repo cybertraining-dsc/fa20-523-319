@@ -27,6 +27,15 @@ Deep Learning methods are becoming very reliable at achieving expert level perfo
 
 Deep learning is a technique to extract and transform data using multiple layers of neural networks. Each layer takes inputs from previous layers and incrementally refines it. An algorithm is used to train these layers to minimize errors and improve overall accuracy of these layers[^10]. It enables the network to learn to perform a specified task and gain an expert level performance by training on large datasets. Our project implements Deep learning models to detect and diagnose multiple conditions using image classification algorithm. Our dataset is called CheXpert which consists of Chest X-rays. CheXpert dataset contain 224,316 chest Radiographs of 65,240 patients. There are 14 observations in a radiology report and labels are mapped to these 14 observations.  Our Deep Learning models use PyTorch library which enables fast, flexible experimentation and efficient production through a user-friendly front-end, distributed training, and ecosystem of tools and libraries[^7].
 
+In this report, we will cover the following:
+* Overview of PyTorch library
+* Overview of CheXpert dataset
+* Basics of AUC-ROC Curve
+* Chest X-Rays - Multi Image Classification Using Deep Learning Model
+* Conclusion
+* Acknowledgements
+* References
+
 ## 2. PyTorch Library
 
 PyTorch library is based on Python and used for developing Python deep learning models. Many of the early adopters
