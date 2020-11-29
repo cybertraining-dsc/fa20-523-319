@@ -37,13 +37,11 @@ In this report, we will cover the following:
 
 ## 2. PyTorch Library
 
-PyTorch library is based on Python and used for developing Python deep learning models. Many of the early adopters
-of the PyTorch are from research community. It grew into one of the most popular library for deep learning projects.
-PyTorch provides great insight into Deep Learning. PyTorch is widely used in real-world applications. PyTorch makes an
-excellent choic for introducing deep learning because clear syntax, streamlined API and easy debugging. PyTorch
-provides a core data structure, the tensor, which is a multidimensional array similar to NumPy arrays. It perform
-accelerated mathematical operations on dedicated hardware, which makes it convenient to design neural network
-architectures and train them on individual machines or parallel computing resources [^2].
+The PyTorch library is based on Python and is used for developing Python deep learning models. Many of the early adopters of the PyTorch are from the research community. It grew into one of the most popular libraries for deep learning projects. PyTorch provides great insight into Deep Learning. PyTorch is widely used in real-world applications. PyTorch makes an excellent choice for introducing deep learning because of clear syntax, streamlined API, and easy debugging. PyTorch provides a core data structure, the tensor, a multidimensional array similar to NumPy arrays. It performs accelerated mathematical operations on dedicated hardware, making it convenient to design neural network architectures and train them on individual machines or parallel computing resources [^2].
+
+We use a pre-trained DenseNet 121 model, which detects the image. DenseNet is efficient on image classification benchmarks as compared to Resnet [^11].
+
+
 
 ## 3. Dataset
 
@@ -174,3 +172,7 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 [^9]: PyTorch 1.x Reinforcement Learning Cookbook <https://www.packtpub.com/product/pytorch-1-x-reinforcement-learning-cookbook/9781838551964>
 
 [^10]: Howard, Jeremy; Gugger, Sylvain. Deep Learning for Coders with fastai and PyTorch . O'Reilly Media. Kindle Edition <https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527/ref=sr_1_5?dchild=1&keywords=pytorch&qid=1606487426&sr=8-5>
+
+[^11]: The efficiency of densenet121 <https://medium.com/@smallfishbigsea/densenet-2b0889854a92>
+
+[^12]: Densetnet architecture <https://miro.medium.com/max/1050/1*znemMaROmOd1CzMJlcI0aA.png>
