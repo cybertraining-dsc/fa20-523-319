@@ -41,7 +41,7 @@ The PyTorch library is based on Python and is used for developing Python deep le
 
 We use a pre-trained DenseNet 121 model, which detects the image. DenseNet is efficient on image classification benchmarks as compared to Resnet [^11].
 
-![Figure 1](https://github.com/cybertraining-dsc/fa20-523-319/blob/main/project/images/densetnet.png)
+![Figure 1](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/densetnet.png)
 
 **Figure 1:** DenseNet Architecture [^12]
 
@@ -100,7 +100,7 @@ or uncertain [^3].
 
 ## 4. Overview Of AUC-ROC Curve
 
-![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/blob/main/project/images/confusion_matrix.png)
+![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/confusion_matrix.png)
 
 **Figure 3:** Confusion Matrix
 
