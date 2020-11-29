@@ -39,7 +39,9 @@ In this report, we will cover the following:
 
 The PyTorch library is based on Python and is used for developing Python deep learning models. Many of the early adopters of the PyTorch are from the research community. It grew into one of the most popular libraries for deep learning projects. PyTorch provides great insight into Deep Learning. PyTorch is widely used in real-world applications. PyTorch makes an excellent choice for introducing deep learning because of clear syntax, streamlined API, and easy debugging. PyTorch provides a core data structure, the tensor, a multidimensional array similar to NumPy arrays. It performs accelerated mathematical operations on dedicated hardware, making it convenient to design neural network architectures and train them on individual machines or parallel computing resources [^2].
 
-We use a pre-trained DenseNet 121 model, which detects the image. DenseNet is efficient on image classification benchmarks as compared to Resnet [^11].
+We use a pre-trained DenseNet model, which classifies the images. DenseNet is efficient on image classification benchmarks as compared to ResNet [^11].
+
+Figure 1 shows the DenseNet architecture.
 
 ![Figure 1](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/densetnet.png)
 
