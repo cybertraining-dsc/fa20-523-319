@@ -100,7 +100,7 @@ or uncertain [^3].
 
 ## 4. Overview Of AUC-ROC Curve
 
-![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/blob/main/project/images/Confusion%20Matrix.png)
+![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/blob/main/project/images/confusion_matrix.png)
 
 **Figure 3:** Confusion Matrix
 
