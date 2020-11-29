@@ -41,6 +41,9 @@ The PyTorch library is based on Python and is used for developing Python deep le
 
 We use a pre-trained DenseNet 121 model, which detects the image. DenseNet is efficient on image classification benchmarks as compared to Resnet [^11].
 
+![Figure 1](https://github.com/cybertraining-dsc/fa20-523-319/blob/main/project/images/densetnet.png)
+
+**Figure 1:** DenseNet Architecture [^12]
 
 
 ## 3. Dataset
@@ -49,9 +52,9 @@ CheXpert is a large public dataset for chest radiograph interpretation, consisti
 of 65,240 patients labeled for the presence of 14 observations as positive, negative, or uncertain [^3].
 
 
-![Figure 1](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/chest_disease.png)
+![Figure 2](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/chest_disease.png)
 
-**Figure 1:** Probability of different observations
+**Figure 2:** Probability of different observations
 
 
 
@@ -97,9 +100,9 @@ or uncertain [^3].
 
 ## 4. Overview Of AUC-ROC Curve
 
-![Figure 2](https://github.com/cybertraining-dsc/fa20-523-319/blob/main/project/images/Confusion%20Matrix.png.png)
+![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/blob/main/project/images/Confusion%20Matrix.png)
 
-**Figure 2:** Confusion Matrix
+**Figure 3:** Confusion Matrix
 
 ## 5. Chest X-Rays - Multi Image Classification Using Deep Learning Model
 
@@ -125,9 +128,9 @@ Similarly, when we increase the threshold, we get more negative values thus we g
 
 
 Model was able to predict False Positives. Below is AUCROC table.
-![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/roc.png)
+![Figure 4](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/roc.png)
 
-**Figure 3:** AUC - ROC Curve
+**Figure 4:** AUC - ROC Curve
 
 ## 7. Acknowledgements
 
