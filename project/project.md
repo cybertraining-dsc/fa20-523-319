@@ -27,7 +27,7 @@ Radiologists widely use chest X-Rays to identify and detect underlying condition
 Deep Learning methods are becoming very reliable at achieving expert-level performance using large labeled datasets. Deep learning is a technique to extract and transform data using multiple layers of neural networks. Each layer takes inputs from previous layers and incrementally refines it. An algorithm is used to train these layers to minimize errors and improve these layers' overall accuracy [^10]. It enables the network to learn to perform a specified task and gain an expert level performance by training on large datasets. The scope of this project is to identify and detect the following 5 pathologies using an image classification algorithm: Atelectasis, Cardiomegaly, Consolidation, Edema, and Pleural Effusion.  We use the CheXpert dataset, which consists of Chest X-rays. CheXpert dataset contains 224,316 chest Radiographs of 65,240 patients. The dataset has 14 observations in radiology reports and captures uncertainties inherent in radiograph interpretation using uncertainty labels. Our focus is on 5 observations (Atelectasis, Cardiomegaly, Consolidation, Edema, and Pleural Effusion). We impute uncertainty labels with randomly selected Boolean values.  Our Deep Learning models are developed using the PyTorch library, enabling fast, flexible experimentation and efficient production through a user-friendly front-end, distributed training, and ecosystem of tools and libraries[^7]. It was primarily developed by Facebook's AI Research lab (FAIR) and used for Computer Vision and NLP applications. PyTorch supports Python and C++ interfaces. There are popular Deep Learning applications built using PyTorch, including Tesla Autopilot, Uber's Pyro, etc. [^4].
 
 In this report, we will cover the following:
-* Overview of PyTorch library
+* Overview of PyTorch library and DenseNet
 * Overview of CheXpert dataset
 * Basics of AUC-ROC Curve
 * Chest X-Rays - Multi-Image Classification Using Deep Learning Model
@@ -35,7 +35,7 @@ In this report, we will cover the following:
 * Acknowledgements
 * References
 
-## 2. PyTorch Library
+## 2. Overview Of PyTorch Library And DenseNet
 
 The PyTorch library is based on Python and is used for developing Python deep learning models. Many of the early adopters of the PyTorch are from the research community. It grew into one of the most popular libraries for deep learning projects. PyTorch provides great insight into Deep Learning. PyTorch is widely used in real-world applications. PyTorch makes an excellent choice for introducing deep learning because of clear syntax, streamlined API, and easy debugging. PyTorch provides a core data structure, the tensor, a multidimensional array similar to NumPy arrays. It performs accelerated mathematical operations on dedicated hardware, making it convenient to design neural network architectures and train them on individual machines or parallel computing resources [^2].
 
@@ -48,7 +48,7 @@ Figure 1 shows the DenseNet architecture.
 **Figure 1:** DenseNet Architecture [^12]
 
 
-## 3. Dataset
+## 3. Overview of CheXpert Dataset
 
 CheXpert is a large public dataset for chest radiograph interpretation, consisting of 224,316 chest radiographs
 of 65,240 patients labeled for the presence of 14 observations as positive, negative, or uncertain [^3].
@@ -100,13 +100,13 @@ label if there is at least one negatively classified mention. Assign (blank) if 
 The *No Finding* observation is assigned a positive label (1) if there is no pathology classified as positive
 or uncertain [^3].
 
-## 4. Overview Of AUC-ROC Curve
+## 4. Basics Of AUC-ROC Curve
 
 ![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/confusion_matrix.png)
 
 **Figure 3:** Confusion Matrix
 
-## 5. Chest X-Rays - Multi Image Classification Using Deep Learning Model
+## 5. Chest X-Rays - Multi-Image Classification Using Deep Learning Model
 
 Our Deep Learning model loads and process the raw data files and implement a Python class to represent data by
 converting it into a format usable by PyTorch. We then, visualize the training and validation data.
