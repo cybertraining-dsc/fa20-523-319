@@ -113,19 +113,19 @@ Figure 3 shows Confusion Matrix. We use Confusion Matrix to explain Sensitivity 
 **Figure 3:** Confusion Matrix
 
 ### 4.1 Sensitivity/True Positive Rate (TPR)
-Sensitivity explains what proportion of the positive class got correctly classified. A simple example would be determining what proportion of the actual sick people are correctly detected by the model [^6]. 
+Sensitivity explains what proportion of the positive class got correctly classified. A simple example would be determining what proportion of the actual sick people are correctly detected by the model [^6].
 
-![Figure 4]()
+![Figure 4](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/TPR.png)
 
 ### 4.2 False Negative Rate (FNR)
 
-![Figure 5]()
+![Figure 5](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/FNR.png)
 ### 4.3 Specificity/True Negative Rate (TNR)
 
-![Figure 6]()
+![Figure 6](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/TNR.png)
 ### 4.4 False Positive Rate (FPR)
 
-![Figure 7]()
+![Figure 7](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/FPR.png)
 ## 5. Chest X-Rays - Multi-Image Classification Using Deep Learning Model
 Our Deep Learning model loads and process the raw data files and implement a Python class to represent data by
 converting it into a format usable by PyTorch. We then, visualize the training and validation data.
