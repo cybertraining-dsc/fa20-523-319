@@ -106,14 +106,27 @@ or uncertain [^3].
 ## 4. Basics Of AUC-ROC Curve
 AUC-ROC stands for Area Under Curve - Receiver Operating Characteristics. It visualizes how well a machine learning classifier is performing. However, it works for only binary classification problems [^6]. In our project, we extend it to evaluate multi-class classification problems.
 
-Figure 3 shows Confusion Matrix. We use Confusion Matrix to explain Sensitivity and Specificity. 
+Figure 3 shows Confusion Matrix. We use Confusion Matrix to explain Sensitivity and Specificity.
 
 ![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/confusion_matrix.png)
 
 **Figure 3:** Confusion Matrix
 
-## 5. Chest X-Rays - Multi-Image Classification Using Deep Learning Model
+### 4.1 Sensitivity/True Positive Rate (TPR)
+Sensitivity explains what proportion of the positive class got correctly classified. A simple example would be determining what proportion of the actual sick people are correctly detected by the model [^6]. 
 
+![Figure 4]()
+
+### 4.2 False Negative Rate (FNR)
+
+![Figure 5]()
+### 4.3 Specificity/True Negative Rate (TNR)
+
+![Figure 6]()
+### 4.4 False Positive Rate (FPR)
+
+![Figure 7]()
+## 5. Chest X-Rays - Multi-Image Classification Using Deep Learning Model
 Our Deep Learning model loads and process the raw data files and implement a Python class to represent data by
 converting it into a format usable by PyTorch. We then, visualize the training and validation data.
 
@@ -136,9 +149,9 @@ Similarly, when we increase the threshold, we get more negative values thus we g
 
 
 Model was able to predict False Positives. Below is AUCROC table.
-![Figure 4](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/roc.png)
+![Figure 8](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/roc.png)
 
-**Figure 4:** AUC - ROC Curve
+**Figure 8:** AUC - ROC Curve
 
 ## 7. Acknowledgements
 
