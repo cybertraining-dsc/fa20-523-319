@@ -104,6 +104,7 @@ The *No Finding* observation is assigned a positive label (1) if there is no pat
 or uncertain [^3].
 
 ## 4. Basics Of AUC-ROC Curve
+AUC-ROC stands for Area Under Curve - Receiver Operating Characteristics. It visualizes how well a machine learning classifier is performing. However, it works for only binary classification problems [^6]. In our project, we extend it to evaluate multi-class classification problems.
 
 ![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/confusion_matrix.png)
 
