@@ -183,3 +183,5 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 [^11]: The efficiency of densenet121 <https://medium.com/@smallfishbigsea/densenet-2b0889854a92>
 
 [^12]: Densetnet architecture <https://miro.medium.com/max/1050/1*znemMaROmOd1CzMJlcI0aA.png>
+
+[^13]: Overview of DenseNet <https://towardsdatascience.com/understanding-and-visualizing-densenets-7f688092391a>
