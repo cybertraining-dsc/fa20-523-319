@@ -36,7 +36,6 @@ In this report, we will cover the following:
 * References
 
 ## 2. Overview Of PyTorch Library And DenseNet
-
 The PyTorch library is based on Python and is used for developing Python deep learning models. Many of the early adopters of the PyTorch are from the research community. It grew into one of the most popular libraries for deep learning projects. PyTorch provides great insight into Deep Learning. PyTorch is widely used in real-world applications. PyTorch makes an excellent choice for introducing deep learning because of clear syntax, streamlined API, and easy debugging. PyTorch provides a core data structure, the tensor, a multidimensional array similar to NumPy arrays. It performs accelerated mathematical operations on dedicated hardware, making it convenient to design neural network architectures and train them on individual machines or parallel computing resources [^2].
 
 We use a pre-trained DenseNet model, which classifies the images. DenseNet is efficient on image classification benchmarks as compared to ResNet [^11].
@@ -50,7 +49,6 @@ Figure 1 shows the DenseNet architecture.
 (Note- adding more about DenseNet)
 
 ## 3. Overview of CheXpert Dataset
-
 CheXpert is a large public dataset. It contains an interpreted chest radiograph consisting of 224,316 chest radiographs
 of 65,240 patients labeled for the presence of 14 observations as positive, negative, or uncertain [^3].
 
@@ -64,7 +62,6 @@ Figure 2 shows the CheXpert labels and the Probability
 
 
 ### 3.1 Data Collection
-
 CheXpert's dataset is a collection of chest radiographic studies from Stanford Hospital, performed between October
 2002 and July 2017 in both inpatient and outpatient centers, along with their associated radiology reports.
 From these, created a sampled set of 1000 reports for manual review by a board certified radiologist to determine
@@ -74,18 +71,15 @@ being a clinical diagnosis, was included as a label in order to represent the im
 infection as the diagnosis. The *No Finding* observation was intended to capture the absence of all pathologies [^3].
 
 ### 3.2 Data Labelling
-
 Labels were developed using an automated rule-based labeler to extract observations from the free text radiology
 reports to be used as structured labels for the images [^3].
 
 ### 3.3 Label Extraction
-
 The labeler extracts mentions from a list of observations from the Impression section of radiology reports, which
 summarizes the key findings in the radiographic study. A large list of phrases was manually curated by multiple
 board-certified radiologists to match various ways observations are mentioned in the reports [^3].
 
 ### 3.4 Label Classification
-
 After extracting mentions of observations, CheXpert Labler classify them as negative , uncertain or positive.
 The ‘uncertain’ label can capture both the uncertainty of a radiologist in the diagnosis as well as ambiguity
 inherent in the report. The mention classification stage is a 3-phase pipeline consisting of pre-negation uncertainty,
@@ -94,7 +88,6 @@ match is found, then the mention is classified accordingly . If a mention is not
 classified as positive [^3].
 
 ### 3.5 Label Aggregation
-
 CheXpert use the classification for each mention of observations to arrive at a final label for 14 observations that
 consist of 12 pathologies as well as the *Support Devices* and *No Finding* observations. Observations with at least
 one mention that is positively classified in the report is assigned a positive (1) label. An observation is assigned
@@ -146,37 +139,17 @@ When we decrease the threshold, we get more positive values thus it increases th
 Similarly, when we increase the threshold, we get more negative values thus we get higher specificity and lower sensitivity [^5].
 
 ## 6. Conclusion
-
-
 Model was able to predict False Positives. Below is AUCROC table.
 ![Figure 8](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/roc.png)
 
 **Figure 8:** AUC - ROC Curve
 
-## 7. Acknowledgements
+## 7. Future Plans
 
+## 8. Acknowledgements
 The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors for providing continuous guidance and feedback for this final project.
-## 8. Project plan
-
-* October 26, 2020
-  * Test train and validate functionality on PyTorch Dataset
-  * Update Project.md with project plan
-*  November 02, 2020
-   * Test train and validate functionality on manual uploaded CheXpert Dataset
-   * Update project.md with specific details about Deep learning models
-* November 09, 2020
-  * Test train and validate functionality on downloaded CheXpert Dataset using "wget"
-  * Update project.md with details about train and validation data set
-  * Capture improvements to loss function
-* November 16, 2020
-  * Self review - code and project.md
-* December 02, 2020
-  * Review with TA/Professor - code and project.md
-* December 07, 2020
-  * Final submission - code and project.md
 
 ## 9. References
-
 [^1]: Chest X-ray Dataset <https://stanfordmlgroup.github.io/competitions/chexpert/>
 
 [^2]: Introduction to PyTorch and documentation  <https://pytorch.org/deep-learning-with-pytorch>
@@ -202,3 +175,24 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 [^12]: Densetnet architecture <https://miro.medium.com/max/1050/1*znemMaROmOd1CzMJlcI0aA.png>
 
 [^13]: Overview of DenseNet <https://towardsdatascience.com/understanding-and-visualizing-densenets-7f688092391a>
+
+[^14]: Ayyadevara, V Kishore; Reddy, Yeshwanth. Modern Computer Vision with PyTorch: Explore deep learning concepts and implement over 50 real-world image applications. Packt Publishing. Kindle Edition. <https://www.packtpub.com/product/modern-computer-vision-with-pytorch/9781839213472>
+
+## 10. Appendix
+###10.1 Project Plan
+* October 26, 2020
+  * Test train and validate functionality on PyTorch Dataset
+  * Update Project.md with project plan
+*  November 02, 2020
+   * Test train and validate functionality on manual uploaded CheXpert Dataset
+   * Update project.md with specific details about Deep learning models
+* November 09, 2020
+  * Test train and validate functionality on downloaded CheXpert Dataset using "wget"
+  * Update project.md with details about train and validation data set
+  * Capture improvements to loss function
+* November 16, 2020
+  * Self review - code and project.md
+* December 02, 2020
+  * Review with TA/Professor - code and project.md
+* December 07, 2020
+  * Final submission - code and project.md
