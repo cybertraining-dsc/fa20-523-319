@@ -90,11 +90,11 @@ The *No Finding* observation is assigned a positive label (1) if there is no pat
 or uncertain [^3].
 
 ## 4. Basics Of AUC-ROC Curve
-AUC-ROC stands for Area Under Curve - Receiver Operating Characteristics. It visualizes how well a machine learning classifier is performing. However, it works for only binary classification problems [^6]. In our project, we extend it to evaluate multi-class classification problems.
+AUC-ROC stands for Area Under Curve - Receiver Operating Characteristics. It visualizes how well a machine learning classifier is performing. However, it works for only binary classification problems [^6]. In our project, we extend it to evaluate Multi-Image classification problem.
 
 Figure 3 shows Confusion Matrix. We use Confusion Matrix to explain Sensitivity and Specificity.
 
-![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/confusion_matrix.png =50x50)
+![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/confusion_matrix.png)
 
 **Figure 3:** Confusion Matrix
 
@@ -114,11 +114,13 @@ Specificity/True Negative Rate (TNR) indicates what proportion of the negative c
 ![Figure 6](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/TNR.png)
 
 ### 4.4 False Positive Rate (FPR)
-False Positive Rate (FPR) indicates what proportion of the negative class got incorrectly classified by the classifier. A higher TNR and a lower FPR means the model correctly classifies the negative class.
+False Positive Rate (FPR) indicates what proportion of the negative class got incorrectly classified by the classifier. A higher TNR and a lower FPR means the model correctly classifies the negative class[^6].
 
 ![Figure 7](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/FPR.png)
 
-### 4.5 AUC-ROC curve
+### 4.5 Purpose of AUC-ROC curve
+A machine learning classification model can predict the actual class of the data point directly or predict its probability of belonging to different classes. In the former case, it means a model can simply classify whether a patient is healthy or not healthy. In the latter case, it means a model can predict the probability of a patient being healthy or not healthy and also provide more control over the result by enabling a way to tune the model's behavior by changing the threshold values. This is powerful because it eliminates the possibility of building a completely new model to achieve a different range of results [^6].
+
 
 ## 5. Chest X-Rays - Multi-Image Classification Using Deep Learning Model
 Our Deep Learning model loads and process the raw data files and implement a Python class to represent data by
