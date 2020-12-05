@@ -121,6 +121,10 @@ False Positive Rate (FPR) indicates what proportion of the negative class got in
 ### 4.5 Purpose of AUC-ROC curve
 A machine learning classification model can predict the actual class of the data point directly or predict its probability of belonging to different classes. The former case example is where a model can classify whether a patient is healthy or not healthy. In the latter case, a model can predict a patient's probability of being healthy or not healthy and provide more control over the result by enabling a way to tune the model's behavior by changing the threshold values. This is powerful because it eliminates the possibility of building a completely new model to achieve a different range of results [^6]. A threshold value helps to interpret the probability and map the probability to a class label. For example, a threshold value such as 0.5, where all values equal to or greater than the threshold, is mapped to one class and rests to another class [^13].
 
+![Figure 8](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/aucroc.png)
+
+**Figure 8:** Probability of prediction and metrics [^6].
+
 
 ## 5. Chest X-Rays - Multi-Image Classification Using Deep Learning Model
 Our Deep Learning model loads and process the raw data files and implement a Python class to represent data by
