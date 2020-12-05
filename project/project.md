@@ -99,19 +99,25 @@ Figure 3 shows Confusion Matrix. We use Confusion Matrix to explain Sensitivity 
 **Figure 3:** Confusion Matrix
 
 ### 4.1 Sensitivity/True Positive Rate (TPR)
-Sensitivity explains what proportion of the positive class got correctly classified. A simple example would be determining what proportion of the actual sick people are correctly detected by the model [^6].
+Sensitivity/True Positive Rate (TPR) explains what proportion of the positive class got correctly classified. A simple example would be determining what proportion of the actual sick people are correctly detected by the model [^6].
 
 ![Figure 4](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/TPR.png)
 
 ### 4.2 False Negative Rate (FNR)
+False Negative Rate (FNR) explains what proportion of the positive class is incorrectly classified by the classifier. A higher TPR and a lower FNR means correctly classify the positive class [^6].
 
 ![Figure 5](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/FNR.png)
+
 ### 4.3 Specificity/True Negative Rate (TNR)
+Specificity/True Negative Rate (TNR) indicates what proportion of the negative class is classified correctly. For example, Specificity determines what proportion of actual healthy people are correctly classified as healthy by the model [^6].
 
 ![Figure 6](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/TNR.png)
+
 ### 4.4 False Positive Rate (FPR)
+False Positive Rate (FPR) indicates what proportion of the negative class got incorrectly classified by the classifier. A higher TNR and a lower FPR means the model correctly classifies the negative class.
 
 ![Figure 7](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/FPR.png)
+
 ## 5. Chest X-Rays - Multi-Image Classification Using Deep Learning Model
 Our Deep Learning model loads and process the raw data files and implement a Python class to represent data by
 converting it into a format usable by PyTorch. We then, visualize the training and validation data.
