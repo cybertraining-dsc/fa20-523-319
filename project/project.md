@@ -94,7 +94,7 @@ AUC-ROC stands for Area Under Curve - Receiver Operating Characteristics. It vis
 
 Figure 3 shows Confusion Matrix. We use Confusion Matrix to explain Sensitivity and Specificity.
 
-![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/confusion_matrix.png)
+![Figure 3](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/confusion_matrix.png =50x50)
 
 **Figure 3:** Confusion Matrix
 
@@ -117,6 +117,8 @@ Specificity/True Negative Rate (TNR) indicates what proportion of the negative c
 False Positive Rate (FPR) indicates what proportion of the negative class got incorrectly classified by the classifier. A higher TNR and a lower FPR means the model correctly classifies the negative class.
 
 ![Figure 7](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/FPR.png)
+
+### 4.5 AUC-ROC curve
 
 ## 5. Chest X-Rays - Multi-Image Classification Using Deep Learning Model
 Our Deep Learning model loads and process the raw data files and implement a Python class to represent data by
