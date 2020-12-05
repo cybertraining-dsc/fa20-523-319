@@ -45,12 +45,12 @@ Figure 1 shows the DenseNet architecture.
 CheXpert is a large public dataset. It contains an interpreted chest radiograph consisting of 224,316 chest radiographs
 of 65,240 patients labeled for the presence of 14 observations as positive, negative, or uncertain [^3].
 
-Figure 2 shows the CheXpert labels and the Probability
+Figure 2 shows the CheXpert labels and the Probability [^1].
 
 
 ![Figure 2](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/chest_disease.png)
 
-**Figure 2:** Probability of different observations
+**Figure 2:** Probability of different observations [^1].
 
 
 
