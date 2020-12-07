@@ -152,6 +152,7 @@ Model was able to predict False Positives. Below is AUCROC table.
 **Figure 8:** AUC - ROC Curve
 
 ## 7. Future Plans
+As the next steps, we will work to improve the model's algorithm and leverage DenseNet architecture to train using smaller dataset.
 
 ## 8. Acknowledgements
 The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors for providing continuous guidance and feedback for this final project.
