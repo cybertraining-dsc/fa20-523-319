@@ -1,12 +1,8 @@
 # Detect and classify pathologies in chest X-rays using PyTorch library
 
-- [ ] organization of sections at the end is wrong, refernces must be last section not appendix
-- [ ] one of the headlines is missing a spzce
-- [ ] remove plan
-
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-319/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-319/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-319/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-319/actions)
-Status: in progress, Type: Project
+Status: in progress
 
 
 Rama Asuri, [fa20-523-319](https://github.com/cybertraining-dsc/fa20-523-319/), [Edit](https://github.com/cybertraining-dsc/fa20-523-319/blob/main/project/project.md)
@@ -49,7 +45,7 @@ Figure 1 shows the DenseNet architecture.
 CheXpert is a large public dataset. It contains an interpreted chest radiograph consisting of 224,316 chest radiographs
 of 65,240 patients labeled for the presence of 14 observations as positive, negative, or uncertain [^3].
 
-Figure 2 shows the CheXpert labels and the Probability [^1].
+Figure 2 shows the CheXpert 14 labels and the Probability [^1]. Our analysis is to predict the probability of 5 different observations (Atelectasis, Cardiomegaly, Consolidation, Edema, and Pleural Effusion) from multi-view chest radiographs shown in Figure 2
 
 
 ![Figure 2](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/chest_disease.png)
@@ -59,39 +55,20 @@ Figure 2 shows the CheXpert labels and the Probability [^1].
 
 
 ### 3.1 Data Collection
-CheXpert's dataset is a collection of chest radiographic studies from Stanford Hospital, performed between October
-2002 and July 2017 in both inpatient and outpatient centers, along with their associated radiology reports.
-From these, created a sampled set of 1000 reports for manual review by a board certified radiologist to determine
-feasibility for extraction of observations. The final set consist of 14 observations based on the prevalence in the
-reports and clinical relevance, conforming to the Fleischner Society’s recommended glossary. *Pneumonia*, despite
-being a clinical diagnosis, was included as a label in order to represent the images that suggested primary
-infection as the diagnosis. The *No Finding* observation was intended to capture the absence of all pathologies [^3].
+CheXpert dataset is a collection of chest radiographic studies from Stanford Hospital, performed between October 2002 and July 2017 in inpatient and outpatient centers, along with their associated radiology reports. Based on studies, a sampled set of 1000 reports were created for manual review by a board-certified radiologist to determine the feasibility for extraction of observations. The final set consists of 14 observations based on the prevalence in the reports and clinical relevance, conforming to the Fleischner Society’s recommended glossary. *Pneumonia*, despite
+being a clinical diagnosis, *Pneumonia* was included as a label to represent the images that suggested primary infection as the diagnosis. The *No Finding* observation was intended to capture the absence of all pathologies [^3].
 
 ### 3.2 Data Labelling
-Labels were developed using an automated rule-based labeler to extract observations from the free text radiology
-reports to be used as structured labels for the images [^3].
+Labels developed using an automated, rule-based labeler to extract observations from the free text radiology reports to be used as structured labels for the images [^3].
 
 ### 3.3 Label Extraction
-The labeler extracts mentions from a list of observations from the Impression section of radiology reports, which
-summarizes the key findings in the radiographic study. A large list of phrases was manually curated by multiple
-board-certified radiologists to match various ways observations are mentioned in the reports [^3].
+The labeler extracts the pathologies mentioned in the list of observations from the Impression section of radiology reports, summarizing the key findings in the radiographic study. Multiple board-certified radiologists manually curated a large list of phrases to match various observations mentioned in the reports [^3].
 
 ### 3.4 Label Classification
-After extracting mentions of observations, CheXpert Labler classify them as negative , uncertain or positive.
-The ‘uncertain’ label can capture both the uncertainty of a radiologist in the diagnosis as well as ambiguity
-inherent in the report. The mention classification stage is a 3-phase pipeline consisting of pre-negation uncertainty,
-negation, and post-negation uncertainty. Each phase consists of rules which are matched against the mention; if a
-match is found, then the mention is classified accordingly . If a mention is not matched in any of the phases, it is
-classified as positive [^3].
+Labeler extracts the mentions of observations and classify them as negative ("no evidence of pulmonary edema, pleural effusions or pneumothorax"), uncertain ("diffuse reticular pattern may represent mild interstitial pulmonary edema"), or positive ("moderate bilateral effusions and bibasilar opacities"). The 'uncertain' label can capture both the uncertainty of a radiologist in the diagnosis as well as the ambiguity inherent in the report ("heart size is stable"). The mention classification stage is a 3-phase pipeline consisting of pre-negation uncertainty, negation, and post-negation uncertainty. Each phase consists of rules that are matched against the mention; if a match is found, the mention is classified accordingly (as uncertain in the first or third phase and as negative in the second phase). If a mention is not matched in any of the phases, it is classified as positive [^3].
 
 ### 3.5 Label Aggregation
-CheXpert use the classification for each mention of observations to arrive at a final label for 14 observations that
-consist of 12 pathologies as well as the *Support Devices* and *No Finding* observations. Observations with at least
-one mention that is positively classified in the report is assigned a positive (1) label. An observation is assigned
-an uncertain (u) label if it has no positively classified mentions and at least one uncertain mention, and a negative
-label if there is at least one negatively classified mention. Assign (blank) if there is no mention of an observation.
-The *No Finding* observation is assigned a positive label (1) if there is no pathology classified as positive
-or uncertain [^3].
+CheXpert dataset use the classification for each mention of observations to arrive at a final label for 14 observations that consist of 12 pathologies and the “Support Devices” and “No Finding” observations. Observations with at least one mention positively classified in the report are assigned a positive (1) label. An observation is assigned an uncertain (u) label if it has no positively classified mentions and at least one uncertain mention, and a negative label if there is at least one negatively classified mention. We assign (blank) if there is no mention of an observation. The “No Finding” observation is assigned a positive label (1) if there is no pathology classified as positive or uncertain [^3].
 
 ## 4. Basics Of AUC-ROC Curve
 AUC-ROC stands for Area Under Curve - Receiver Operating Characteristics. It visualizes how well a machine learning classifier is performing. However, it works for only binary classification problems [^6]. In our project, we extend it to evaluate Multi-Image classification problem.
@@ -123,7 +100,7 @@ False Positive Rate (FPR) indicates what proportion of the negative class got in
 ![Figure 7](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/FPR.png)
 
 ### 4.5 Purpose of AUC-ROC curve
-A machine learning classification model can predict the actual class of the data point directly or predict its probability of belonging to different classes. The former case example is where a model can classify whether a patient is healthy or not healthy. In the latter case, a model can predict a patient's probability of being healthy or not healthy and provide more control over the result by enabling a way to tune the model's behavior by changing the threshold values. This is powerful because it eliminates the possibility of building a completely new model to achieve a different range of results [^6]. A threshold value helps to interpret the probability and map the probability to a class label. For example, a threshold value such as 0.5, where all values equal to or greater than the threshold, is mapped to one class and rests to another class [^13].
+A machine learning classification model can predict the actual class of the data point directly or predict its probability of belonging to different classes. The example for the former case is where a model can classify whether a patient is healthy or not healthy. In the latter case, a model can predict a patient's probability of being healthy or not healthy and provide more control over the result by enabling a way to tune the model's behavior by changing the threshold values. This is powerful because it eliminates the possibility of building a completely new model to achieve a different range of results [^6]. A threshold value helps to interpret the probability and map the probability to a class label. For example, a threshold value such as 0.5, where all values equal to or greater than the threshold, is mapped to one class and rests to another class [^13].
 
 ![Figure 8](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/aucroc.png)
 
