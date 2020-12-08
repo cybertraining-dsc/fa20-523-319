@@ -86,7 +86,7 @@ Labeler extracts the mentions of observations and classify them as negative ("no
 
 ### 4.5 Label Aggregation
 
-CheXpert dataset use the classification for each mention of observations to arrive at a final label for 14 observations that consist of 12 pathologies and the "Support Devices" and “No Finding” observations. Observations with at least one mention positively classified in the report are assigned a positive (1) label. An observation is assigned an uncertain (u) label if it has no positively classified mentions and at least one uncertain mention, and a negative label if there is at least one negatively classified mention. We assign (blank) if there is no mention of an observation. The “No Finding” observation is assigned a positive label (1) if there is no pathology classified as positive or uncertain [^3].
+CheXpert dataset use the classification for each mention of observations to arrive at a final label for 14 observations that consist of 12 pathologies and the "Support Devices" and "No Finding" observations. Observations with at least one mention positively classified in the report are assigned a positive (1) label. An observation is assigned an uncertain (u) label if it has no positively classified mentions and at least one uncertain mention, and a negative label if there is at least one negatively classified mention. We assign (blank) if there is no mention of an observation. The "No Finding" observation is assigned a positive label (1) if there is no pathology classified as positive or uncertain [^3].
 
 ## 5. Overview Of AUC-ROC Curve
 
