@@ -182,8 +182,11 @@ Figure 9 shows training loss, Validation loss and validation AUC-ROC score after
 Figure 10 shows model predicts False Positives. Below is AUCROC table.
 ![Figure 10](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/roc.png)
 
-**Figure 10:** AUC - ROC Curve
+**Figure 10:** AUC - ROC data
 
+![Figure 11](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/aucroc_stanford.png)
+
+**Figure 11:** AUC - ROC Curve
 
 ## 8. Conclusion
 
