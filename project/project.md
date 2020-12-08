@@ -226,6 +226,7 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 
 [^14]: Ayyadevara, V Kishore; Reddy, Yeshwanth. Modern Computer Vision with PyTorch: Explore deep learning concepts and implement over 50 real-world image applications. Packt Publishing. Kindle Edition. <https://www.packtpub.com/product/modern-computer-vision-with-pytorch/9781839213472>
 [^15]: Definition of Threshold <https://machinelearningmastery.com/threshold-moving-for-imbalanced-classification/#:~:text=The%20decision%20for%20converting%20a,in%20the%20range%20between%200>
+[^16]: AUCROC curves from CheXpert <>
 
 ## 12. Appendix
 
