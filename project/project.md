@@ -2,7 +2,7 @@
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-319/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-319/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-319/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-319/actions)
-Status: in progress
+Status: final
 
 
 Rama Asuri, [fa20-523-319](https://github.com/cybertraining-dsc/fa20-523-319/), [Edit](https://github.com/cybertraining-dsc/fa20-523-319/blob/main/project/project.md)
@@ -186,7 +186,7 @@ Figure 10 shows model predicts False Positives. Below is AUCROC table.
 
 This graph is taken from Stanford CheXpert dataset. Based on Figure 11 [^16], our AUCROC value is around 85%.
 
-![Figure 11](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/aucroc_stanford.PNG)
+![Figure 11](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/aucroc_stanford.png)
 
 **Figure 11:** AUC - ROC Curve [^16]
 
