@@ -32,7 +32,7 @@ In this analysis, first, we begin with an overview of the PyTorch library and De
 The PyTorch library is based on Python and is used for developing Python deep learning models. Many of the early adopters of the PyTorch are from the research community. It grew into one of the most popular libraries for deep learning projects. PyTorch provides great insight into Deep Learning. PyTorch is widely used in real-world applications. PyTorch makes an excellent choice for introducing deep learning because of clear syntax, streamlined API, and easy debugging. PyTorch provides a core data structure, the tensor, a multidimensional array similar to NumPy arrays. It performs accelerated mathematical operations on dedicated hardware, making it convenient to design neural network architectures and train them on individual machines or parallel computing resources [^2].
 
 ## 3. Overview of DenseNet
-We use a pre-trained DenseNet model, which classifies the images. DenseNet is efficient on image classification benchmarks as compared to ResNet. As shown in Figure 1, DenseNet contains a feature layer (convolutional layer) capturing low-level features from images, several dense blocks, and transition layers between adjacent dense blocks [^11].
+We use a pre-trained DenseNet model, which classifies the images. DenseNet is new Convolutional Neural Network architecture which is efficient on image classification benchmarks as compared to ResNet [^11]. RestNets, Highway networks, and deep and wide neural networks add more inter-layer connections than the direct connection in adjacent layers to boost information flow and layers. Similar to ResNet, DenseNet adds shortcuts among layers. Different from ResNet, a layer in dense receives all the outputs of previous layers and concatenate them in the depth dimension. In ResNet, a layer only receives outputs from the last two layers, and the outputs are added together on the individual same depth. Therefore it will not change the depth by adding shortcuts. In other words, in ResNet the output of layer of k is x[k] = f(w * x[k-1] + x[k-2]), while in DenseNet it is x[k] = f(w * H(x[k-1], x[k-2], … x[1])) where H means stacking over the depth dimension. Besides, ResNet makes learn the identity function easy, while DenseNet directly adds an identity function [^11].
 
 Figure 1 shows the DenseNet architecture.
 
@@ -40,7 +40,12 @@ Figure 1 shows the DenseNet architecture.
 
 **Figure 1:** DenseNet Architecture [^12]
 
-RestNets, Highway networks, and deep and wide neural networks add more inter-layer connections than the direct connection in adjacent layers to boost information flow and layers. Similar to ResNet, DenseNet adds shortcuts among layers. Different from ResNet, a layer in dense receives all the outputs of previous layers and concatenate them in the depth dimension. In ResNet, a layer only receives outputs from the last two layers, and the outputs are added together on the individual same depth. Therefore it will not change the depth by adding shortcuts. In other words, in ResNet the output of layer of k is x[k] = f(w * x[k-1] + x[k-2]), while in DenseNet it is x[k] = f(w * H(x[k-1], x[k-2], … x[1])) where H means stacking over the depth dimension. Besides, ResNet makes learn the identity function easy, while DenseNet directly adds an identity function [^11].
+As shown in Figure 1, DenseNet contains a feature layer (convolutional layer) capturing low-level features from images, several dense blocks, and transition layers between adjacent dense blocks [^11].
+### 3.1 Dense blocks
+Dense block contains several dense layers. The depth of a dense layer output is called growth_rate. Every dense layer receives all the output of its previous layers. The input depth for the kth layer is (k-1)*growth_rate + input_depth_of_first_layer. By adding more layers in a dense block, the depth will grow linearly. For example, if the growth rate is 30 and after 100 layers, the depth will be over 3000. However, this could lead to a computational explosion. It is addressed by introducing a transition layer to reduce and abstract the features after a dense block with a limited number of dense layers to circumvent this problem [^13]. A 1x1 convolutional layer (bottleneck layer) is added to reduce the computation, which makes the second convolutional layer always has a fixed input depth. It is also easy to see the size (width and height) of the feature maps keeps the same through the dense layer, making it easy to stack any number of dense layers together to build a dense block. For example, densenet121 has four dense blocks with 6, 12, 24, and 16 dense layers. With repetition, it is not that difficult to make 112 layers [^13].
+
+### 3.2 Transition layers
+In general, the size of every layer's output in Convolutional Neural Network decreases to abstract higher-level features. In DenseNet, the transition layers take this responsibility while the dense blocks keep the size and depth. Every transition layer contains a 1x1 convolutional layer and a 2x2 average pooling layer to reduce the size to half. However, transition layers also receive all the output from all the last dense block layers. So the 1*1 convolutional layer reduces the depth to a fixed number, while the average pooling reduces the size.
 
 ## 4. Overview of CheXpert Dataset
 CheXpert is a large public dataset. It contains an interpreted chest radiograph consisting of 224,316 chest radiographs
@@ -173,7 +178,7 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 
 [^12]: Densetnet architecture <https://miro.medium.com/max/1050/1*znemMaROmOd1CzMJlcI0aA.png>
 
-[^13]: Overview of DenseNet <https://towardsdatascience.com/understanding-and-visualizing-densenets-7f688092391a>
+[^13]: Densely Connected Convolutional Networks <https://arxiv.org/pdf/1608.06993.pdf>
 
 [^14]: Ayyadevara, V Kishore; Reddy, Yeshwanth. Modern Computer Vision with PyTorch: Explore deep learning concepts and implement over 50 real-world image applications. Packt Publishing. Kindle Edition. <https://www.packtpub.com/product/modern-computer-vision-with-pytorch/9781839213472>
 [^15]: Definition of Threshold <https://machinelearningmastery.com/threshold-moving-for-imbalanced-classification/#:~:text=The%20decision%20for%20converting%20a,in%20the%20range%20between%200>
