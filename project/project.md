@@ -1,5 +1,9 @@
 # Detect and classify pathologies in chest X-rays using PyTorch library
 
+- [ ] organization of sections at the end is wrong, refernces must be last section not appendix
+- [ ] one of the headlines is missing a spzce
+- [ ] remove plan
+
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-319/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-319/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-319/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-319/actions)
 Status: in progress, Type: Project
