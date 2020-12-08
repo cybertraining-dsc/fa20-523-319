@@ -70,7 +70,7 @@ Labeler extracts the mentions of observations and classify them as negative ("no
 ### 3.5 Label Aggregation
 CheXpert dataset use the classification for each mention of observations to arrive at a final label for 14 observations that consist of 12 pathologies and the “Support Devices” and “No Finding” observations. Observations with at least one mention positively classified in the report are assigned a positive (1) label. An observation is assigned an uncertain (u) label if it has no positively classified mentions and at least one uncertain mention, and a negative label if there is at least one negatively classified mention. We assign (blank) if there is no mention of an observation. The “No Finding” observation is assigned a positive label (1) if there is no pathology classified as positive or uncertain [^3].
 
-## 4. Basics Of AUC-ROC Curve
+## 4. Overview Of AUC-ROC Curve
 AUC-ROC stands for Area Under Curve - Receiver Operating Characteristics. It visualizes how well a machine learning classifier is performing. However, it works for only binary classification problems [^6]. In our project, we extend it to evaluate Multi-Image classification problem.
 
 Figure 3 shows Confusion Matrix. We use Confusion Matrix to explain Sensitivity and Specificity.
@@ -102,10 +102,15 @@ False Positive Rate (FPR) indicates what proportion of the negative class got in
 ### 4.5 Purpose of AUC-ROC curve
 A machine learning classification model can predict the actual class of the data point directly or predict its probability of belonging to different classes. The example for the former case is where a model can classify whether a patient is healthy or not healthy. In the latter case, a model can predict a patient's probability of being healthy or not healthy and provide more control over the result by enabling a way to tune the model's behavior by changing the threshold values. This is powerful because it eliminates the possibility of building a completely new model to achieve a different range of results [^6]. A threshold value helps to interpret the probability and map the probability to a class label. For example, a threshold value such as 0.5, where all values equal to or greater than the threshold, is mapped to one class and rests to another class [^13].
 
+Introducing different thresholds for classifying positive class for data points will inadvertently change the Sensitivity and Specificity of the model. Furthermore, one of these thresholds will probably give a better result than the others, depending on whether we aim to lower the number of False Negatives or False Positives [^6].
+As seen in Figure 8, the metrics change with the changing threshold values. We can generate different confusion matrices and compare the various metrics. However, it is very inefficient. Instead, we can generate a plot between some of these metrics so that we can easily visualize which threshold is giving us a better result. The AUC-ROC curve solves just that [^6].
+
 ![Figure 8](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/aucroc.png)
 
 **Figure 8:** Probability of prediction and metrics [^6].
 
+### 4.6 Definition of AUC-ROC
+The Receiver Operator Characteristic (ROC) curve is an evaluation metric for binary classification problems. It is a probability curve that plots the TPR against FPR at various threshold values and essentially separates the signal from the noise. The Area Under the Curve (AUC) is the measure of a classifier's ability to distinguish between classes and is used as a summary of the ROC curve. The higher the AUC, the better the model's performance at distinguishing between the positive and negative classes. When AUC = 1, the classifier can perfectly distinguish between all the Positive and the Negative class points correctly. If, however, the AUC had been 0, then the classifier would be predicting all Negatives as Positives and all Positives as Negatives. When 0.5<AUC<1, there is a high chance that the classifier will be able to distinguish the positive class values from the negative class values. This is because the classifier can detect more True positives and True negatives than False negatives and False positives. When AUC=0.5, then the classifier is not able to distinguish between Positive and Negative class points. It means either the classifier is predicting random class or constant class for all the data points. Therefore, the higher the AUC value for a classifier, the better its ability to distinguish between positive and negative classes. In the AUC-ROC curve, a higher X-axis value indicates a higher number of False positives than True negatives. Simultaneously, a higher Y-axis value indicates a higher number of True positives than False negatives. So, the choice of the threshold depends on balancing between False positives and False negatives [^6].
 
 ## 5. Chest X-Rays - Multi-Image Classification Using Deep Learning Model
 Our Deep Learning model loads and process the raw data files and implement a Python class to represent data by
@@ -126,19 +131,20 @@ AUCROC's Sensitivity and Specificity are inversely proportional to each other. S
 When we decrease the threshold, we get more positive values thus it increases the sensitivity and decreasing the specificity.
 Similarly, when we increase the threshold, we get more negative values thus we get higher specificity and lower sensitivity [^5].
 
-## 6. Conclusion
+## 6. Results and Analysis
+## 7. Conclusion
 Model was able to predict False Positives. Below is AUCROC table.
 ![Figure 8](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/roc.png)
 
 **Figure 8:** AUC - ROC Curve
 
-## 7. Future Plans
+## 8. Future Plans
 As the next steps, we will work to improve the model's algorithm and leverage DenseNet architecture to train using smaller dataset.
 
-## 8. Acknowledgements
+## 9. Acknowledgements
 The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors for providing continuous guidance and feedback for this final project.
 
-## 9. References
+## 10. References
 [^1]: Chest X-ray Dataset <https://stanfordmlgroup.github.io/competitions/chexpert/>
 
 [^2]: Introduction to PyTorch and documentation  <https://pytorch.org/deep-learning-with-pytorch>
@@ -168,8 +174,8 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 [^14]: Ayyadevara, V Kishore; Reddy, Yeshwanth. Modern Computer Vision with PyTorch: Explore deep learning concepts and implement over 50 real-world image applications. Packt Publishing. Kindle Edition. <https://www.packtpub.com/product/modern-computer-vision-with-pytorch/9781839213472>
 [^15]: Definition of Threshold <https://machinelearningmastery.com/threshold-moving-for-imbalanced-classification/#:~:text=The%20decision%20for%20converting%20a,in%20the%20range%20between%200>
 
-## 10. Appendix
-###10.1 Project Plan
+## 11. Appendix
+###11.1 Project Plan
 * October 26, 2020
   * Test train and validate functionality on PyTorch Dataset
   * Update Project.md with project plan
