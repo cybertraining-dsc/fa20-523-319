@@ -133,7 +133,7 @@ Our approach to predicting pathologies will have 5 steps.
 ### 6.1 Load and split Chest X-rays Dataset
 We load and split the dataset to 90% for training and 10% for validation randomly.
 ### 6.2 Build and train baseline Deep Learning model
-
+We use the PyTorch library to implement and train DenseNet CNN as a baseline model. With initial weights from ImageNet, we retrain all layers. In PyTorch, we implement a subclass for the PyTorch to transform CheXpert Dataset and create a custom data loading process. The Image Augmentation is executed within this subclass. Additionally, a DataLoader also needs to be created. We shuffle the dataset for the training dataloader. We also create a validation dataloader, which is different from the training dataloader and does not require shuffling. In the baseline model, we use DenseNet pre-trained on the ImageNet dataset. The model's classifier is replaced with a new dense layer and use the CheXpert labels to train [^5].
 
 ### 6.3 Evaluate the model
 ### 6.4 Predict the pathologies
