@@ -184,12 +184,15 @@ Figure 10 shows model predicts False Positives. Below is AUCROC table.
 
 **Figure 10:** AUC - ROC data
 
-![Figure 11](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/aucroc_stanford.png)
+This graph is taken from Stanford CheXpert dataset. Based on Figure 10, our AUCROC value is around 85%.
+
+![Figure 11](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/aucroc_stanford.PNG)
 
 **Figure 11:** AUC - ROC Curve
 
 ## 8. Conclusion
 
+Our model achieves the best AUC on Edema (0.89) and the worst on Plural(0.65). The AUC of all other observations is around 0.78. Our model achieves above 0.65 overall predictions.
 
 ## 9. Future Plans
 
