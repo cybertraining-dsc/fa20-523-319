@@ -184,11 +184,11 @@ Figure 10 shows model predicts False Positives. Below is AUCROC table.
 
 **Figure 10:** AUC - ROC data
 
-This graph is taken from Stanford CheXpert dataset. Based on Figure 10, our AUCROC value is around 85%.
+This graph is taken from Stanford CheXpert dataset. Based on Figure 11 [^16], our AUCROC value is around 85%.
 
 ![Figure 11](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/aucroc_stanford.PNG)
 
-**Figure 11:** AUC - ROC Curve
+**Figure 11:** AUC - ROC Curve [^16]
 
 ## 8. Conclusion
 
