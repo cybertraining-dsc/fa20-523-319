@@ -133,14 +133,14 @@ Our approach to predicting pathologies will have 5 steps.
 ### 6.1 Load and split Chest X-rays Dataset
 We load and split the dataset to 90% for training and 10% for validation randomly.
 ### 6.2 Build and train baseline Deep Learning model
-We use the PyTorch library to implement and train DenseNet CNN as a baseline model. With initial weights from ImageNet, we retrain all layers. In PyTorch, we implement a subclass for the PyTorch to transform CheXpert Dataset and create a custom data loading process. The Image Augmentation is executed within this subclass. Additionally, a DataLoader also needs to be created. We shuffle the dataset for the training dataloader. We also create a validation dataloader, which is different from the training dataloader and does not require shuffling. In the baseline model, we use DenseNet pre-trained on the ImageNet dataset. The model's classifier is replaced with a new dense layer and use the CheXpert labels to train [^5].
-
+We use the PyTorch library to implement and train DenseNet CNN as a baseline model. With initial weights from ImageNet, we retrain all layers. In PyTorch, we implement a subclass for the PyTorch to transform CheXpert Dataset and create a custom data loading process. The Image Augmentation is executed within this subclass. Additionally, a DataLoader also needs to be created. We shuffle the dataset for the training dataloader. We also create a validation dataloader, which is different from the training dataloader and does not require shuffling. In the baseline model, we use DenseNet pre-trained on the ImageNet dataset. The model's classifier is replaced with a new dense layer and use the CheXpert labels to train [^5]. The number of trainable parameters 6968206 (~7  million).
 ### 6.3 Evaluate the model
+To evaluate the model, we implement a function to validate the model on the validation dataset.
 ### 6.4 Predict the pathologies
 ### 6.5 Calculate the AUC-ROC score
+We have multiple labels, and we need to calculate the AUCROC-score for each class against the rest of the classifiers.
 
 ## 7. Results and Analysis
-
 Figure 9 shows training loss, Validation loss and validation AUC-ROC score after training our Deep Learning model for 7 hours.
 
 ![Figure 9](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/Train.png)
