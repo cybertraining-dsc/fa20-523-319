@@ -137,6 +137,7 @@ We use the PyTorch library to implement and train DenseNet CNN as a baseline mod
 ### 6.3 Evaluate the model
 To evaluate the model, we implement a function to validate the model on the validation dataset.
 ### 6.4 Predict the pathologies
+We use our model to predict 1 of the 5 pathologies - Atelectasis, Cardiomegaly, Consolidation, Edema, and Pleural Effusion. Our model uses a test dataset. 
 ### 6.5 Calculate the AUC-ROC score
 We have multiple labels, and we need to calculate the AUCROC-score for each class against the rest of the classifiers.
 
