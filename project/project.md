@@ -133,15 +133,25 @@ Our approach to predicting pathologies will have 5 steps.
 ### 6.1 Load and split Chest X-rays Dataset
 We load and split the dataset to 90% for training and 10% for validation randomly.
 ### 6.2 Build and train baseline Deep Learning model
+
+
 ### 6.3 Evaluate the model
 ### 6.4 Predict the pathologies
 ### 6.5 Calculate the AUC-ROC score
 
 ## 7. Results and Analysis
-Model was able to predict False Positives. Below is AUCROC table.
-![Figure 9](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/roc.png)
 
-**Figure 9:** AUC - ROC Curve
+Figure 9 shows training loss, Validation loss and validation AUC-ROC score after training our Deep Learning model for 7 hours.
+
+![Figure 9](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/Train.png)
+
+**Figure 9:** Training loss, Validation loss and validation AUC-ROC score
+
+
+Figure 10 shows model predicts False Positives. Below is AUCROC table.
+![Figure 10](https://github.com/cybertraining-dsc/fa20-523-319/raw/main/project/images/roc.png)
+
+**Figure 10:** AUC - ROC Curve
 
 
 ## 8. Conclusion
