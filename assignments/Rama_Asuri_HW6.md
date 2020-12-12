@@ -1,17 +1,9 @@
 # Rama Asuri - Homework 6 AI in Health and Medicine
 
-AI in health and medicine is achieving expert-level performance. In this paper, we examine two different examples where
-AI could detect cancer and explore the current status of AI in cancer diagnosis [1].
+AI in health and medicine is achieving expert-level performance. In this paper, we examine two different examples where AI could detect and predict the malign tumors [1].
 
-In the first example, we will cover Cervical cancer. Cervical cancer kills more women in India than in any other
-country. It is a preventable disease that kills 67000 women in India. Screening and detection can help reduce
-the number of deaths, but the challenge is the testing process, which takes enormous time. SRL diagnostics partnered
-with Microsoft to co-create an AI Network of Pathology to reduce cytopathologists and histopathologists' burden.
-Cytopathologists at SRL Diagnostics manually marked their observations. These observations were used as training data
-for Cervical Cancer Image Detection. However, there was a different challenge, the way cytopathologists examine different
-elements are unique even though they all have come to the same conclusion. This was because these experts
-may approach a problem from a different direction. The AI model able to differentiate between normal and abnormal
-smear slides with accuracy [1].
+In the first example, we will cover Cervical cancer. Cervical cancer kills more women in India than in any other country. It is a preventable disease that kills 67000 women in India. Screening and detection can help reduce the number of deaths, but the challenge is the testing process, which takes enormous time. SRL diagnostics partnered with Microsoft to co-create an AI Network of Pathology to reduce cytopathologists and histopathologists' burden. Cytopathologists at SRL Diagnostics manually marked their observations. These observations were used as training data
+for Cervical Cancer Image Detection. However, there was a different challenge, the way cytopathologists examine different elements are unique even though they all have come to the same conclusion. This was because these experts may approach a problem from a different direction. The Manish Gupta, Principal Applied Researcher at Microsoft Azure Global Engineering, who worked closely with the team at SRL Diagnostics, said the idea was to create an AI algorithm that could identify areas that everybody was looking at and “create a consensus on the areas assessed.” Cytopathologists across multiple labs and locations annotated thousands of tile images of a cervical smear. They created discordant and concordant notes on each sample image. “The images for which annotations were found to be discordant — that is if they were viewed differently by three team members — were sent to senior cytopathologists for final analysis”. SRL Diagnostics has started an internal preview to use Cervical Cancer Image Detection API. The Cervical Cancer Image Detection API, which runs on Microsoft’s Azure, can quickly screen liquid-based cytology slide images to detect cervical cancer in the early stages and return insights to pathologists in labs. The AI model can now differentiate between normal and abnormal smear slides with accuracy and is currently under validation in labs. It can also classify smear slides based on the seven-subtypes of cervical cytopathological scale [1].
 
 The second example is about detecting lung cancer. The survival rate is really high if lung cancer is detected during
 the early stages. Nevertheless, the problem is that it is difficult to do it manually when there millions of 3D X-rays.
