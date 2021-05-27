@@ -7,6 +7,8 @@ Status: final
 
 Rama Asuri, [fa20-523-319](https://github.com/cybertraining-dsc/fa20-523-319/), [Edit](https://github.com/cybertraining-dsc/fa20-523-319/blob/main/project/project.md)
 
+Code: [project.ipynb](https://github.com/cybertraining-dsc/fa20-523-319/blob/main/project/project.ipynb)
+
 {{% pageinfo %}}
 
 ## Abstract
