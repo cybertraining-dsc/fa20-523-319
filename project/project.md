@@ -1,4 +1,14 @@
-# Detect and classify pathologies in chest X-rays using PyTorch library
+---
+date: 2021-03-15
+title: Detect and classify pathologies in chest X-rays using PyTorch library
+linkTitle: X-rays
+tags: ["project", "ai", ""]
+description: Detect and classify pathologies in chest X-rays using PyTorch library
+author: Rama Asuri
+resources:
+- src: "**.{png,jpg}"
+  title: "Image #:counter"
+---
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-319/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-319/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-319/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-319/actions)
